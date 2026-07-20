@@ -1,23 +1,32 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/layout/Footer";
-import Hero from "@/components/home/Hero";
-import About from "@/components/home/About";
-import FeaturedResearch from "@/components/home/FeaturedResearch";
-import FeaturedProjects from "@/components/home/FeaturedProjects";
+import SectionHeading from "../ui/SectionHeading";
+import ResearchCard from "../research/ResearchCard";
+import { research } from "@/data/research";
 
-export default function Home() {
+export default function FeaturedResearch() {
   return (
-    <>
-      <Navbar />
+    <section className="mx-auto max-w-7xl px-6 py-24">
 
-      <main className="bg-white">
-        <Hero />
-        <About />
-        <FeaturedResearch />
-        <FeaturedProjects />
-      </main>
+      <SectionHeading
+        title="Featured Research"
+        subtitle="Academic research in economics, econometrics and finance."
+      />
 
-      <Footer />
-    </>
+      <div className="mt-12 grid gap-8 lg:grid-cols-2">
+
+        {research.map((paper) => (
+          <ResearchCard
+            key={paper.id}
+            title={paper.title}
+            description={paper.description}
+            year={paper.year}
+            tags={paper.tags}
+            slug={paper.slug}
+            thumbnail={paper.thumbnail}
+          />
+        ))}
+
+      </div>
+
+    </section>
   );
 }

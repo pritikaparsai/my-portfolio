@@ -1,38 +1,65 @@
-type ResearchCardProps = {
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+type Props = {
+  slug: string;
   title: string;
   description: string;
+  year: string;
   tags: string[];
+  thumbnail: string;
 };
 
 export default function ResearchCard({
+  slug,
   title,
   description,
+  year,
   tags,
-}: ResearchCardProps) {
+  thumbnail,
+}: Props) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <h3 className="text-2xl font-bold text-gray-900">
-        {title}
-      </h3>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700"
-          >
-            {tag}
-          </span>
-        ))}
+    <Link
+      href={`/research/${slug}`}
+      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+    >
+      <div className="relative h-56 overflow-hidden">
+        <Image
+          src={thumbnail}
+          alt={title}
+          fill
+          className="object-cover transition duration-500 group-hover:scale-105"
+        />
       </div>
 
-      <p className="mt-6 leading-7 text-gray-600">
-        {description}
-      </p>
+      <div className="p-8">
+        <p className="text-sm font-semibold text-blue-600">{year}</p>
 
-      <button className="mt-8 font-semibold text-blue-600 hover:underline">
-        Read More →
-      </button>
-    </div>
+        <h3 className="mt-3 text-2xl font-bold text-slate-900">
+          {title}
+        </h3>
+
+        <p className="mt-5 leading-7 text-slate-600">
+          {description}
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-8 inline-flex items-center gap-2 font-semibold text-blue-600 transition group-hover:gap-4">
+          Read Research
+          <ArrowRight size={18} />
+        </div>
+      </div>
+    </Link>
   );
 }

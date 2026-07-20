@@ -1,8 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/layout/Footer";
+
 import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
-import FeaturedResearch from "../components/home/FeaturedResearch";import FeaturedProjects from "@/components/home/FeaturedProjects";
+import FeaturedResearch from "@/components/home/FeaturedResearch";
+import FeaturedPortfolio from "@/components/home/FeaturedPortfolio";
+import Experience from "@/components/home/Experience";
+import Skills from "@/components/home/Skills";
 
 export default function Home() {
   return (
@@ -13,7 +17,9 @@ export default function Home() {
         <Hero />
         <About />
         <FeaturedResearch />
-        <FeaturedProjects />
+        <FeaturedPortfolio />
+        <Experience />
+        <Skills />
       </main>
 
       <Footer />

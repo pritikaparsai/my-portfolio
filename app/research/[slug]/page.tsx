@@ -1,14 +1,12 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Research Paper | Pritika Parsai",
-};
+import type { Metadata } from "next";
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
 import { research } from "@/data/research";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
 
 import ResearchHero from "@/components/research/ResearchHero";
 import ResearchInfo from "@/components/research/ResearchInfo";
@@ -19,20 +17,37 @@ import ResearchSidebar from "@/components/research/ResearchSidebar";
 import Citation from "@/components/research/Citation";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function ResearchDetails({ params }: Props) {
-  const paper = research.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const paper = research.find((item) => item.slug === slug);
+
+  return {
+    title: paper ? `${paper.title} | Research` : "Research Paper",
+    description: paper?.description,
+  };
+}
+
+export function generateStaticParams() {
+  return research.map((paper) => ({ slug: paper.slug }));
+}
+
+export default async function ResearchDetails({ params }: Props) {
+  const { slug } = await params;
+  const paper = research.find((item) => item.slug === slug);
 
   if (!paper) {
     notFound();
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16">
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-7xl px-6 py-16">
 
       {/* Back Button */}
 
@@ -93,6 +108,8 @@ export default function ResearchDetails({ params }: Props) {
 
       </div>
 
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

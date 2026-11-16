@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Women’s household decision-making research thumbnail</title>
+  <desc id="desc">Research cover graphic for a Pune case study on women’s decision-making in low-income households.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#41264f"/><stop offset="1" stop-color="#9c5877"/></linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="32" fill="url(#bg)"/>
+  <circle cx="790" cy="175" r="110" fill="#f7d49b" opacity=".16"/>
+  <path d="M650 390h200M675 390v105m150-105v105M635 495h230" fill="none" stroke="#f7d49b" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="710" cy="335" r="36" fill="#f7d49b"/><circle cx="790" cy="335" r="36" fill="#f7d49b"/>
+  <text x="72" y="100" fill="#f7d49b" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">PUNE · CASE STUDY</text>
+  <text x="72" y="210" fill="#fff" font-family="Arial, sans-serif" font-size="47" font-weight="700">Women’s Household</text>
+  <text x="72" y="276" fill="#fff" font-family="Arial, sans-serif" font-size="47" font-weight="700">Decision-Making</text>
+  <text x="74" y="348" fill="#f3dce6" font-family="Arial, sans-serif" font-size="25">Low-income households · Primary &amp; secondary research</text>
+  <rect x="72" y="435" width="245" height="48" rx="24" fill="#f7d49b"/>
+  <text x="100" y="467" fill="#41264f" font-family="Arial, sans-serif" font-size="19" font-weight="700">GENDER ECONOMICS</text>
+</svg>

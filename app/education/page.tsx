@@ -4,6 +4,8 @@ import Achievements from "@/components/education/Achievements";
 import EducationStats from "@/components/education/EducationStats";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
 import {
   education,
   academicHighlights,
@@ -22,6 +24,8 @@ export default function EducationPage() {
   const university = education[0];
 
   return (
+    <>
+      <Navbar />
     <main className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-6">
         {/* Hero */}
@@ -32,6 +36,15 @@ export default function EducationPage() {
           subtitle="My academic journey combines economics with data analytics, equipping me with strong quantitative, analytical and research skills. Alongside coursework, research and internships, I continue to develop practical expertise across economics, analytics and technology."
           centered
         />
+
+        <div className="mx-auto mt-10 max-w-md rounded-2xl border border-blue-100 bg-white px-6 py-5 text-center shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
+            Total Undergraduate Credits
+          </p>
+          <p className="mt-1 text-4xl font-bold text-slate-900">
+            {university.totalUndergraduateCredits}
+          </p>
+        </div>
 
         {/* Stats */}
 
@@ -110,5 +123,7 @@ export default function EducationPage() {
         </section>
       </div>
     </main>
+      <Footer />
+    </>
   );
 }

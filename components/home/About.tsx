@@ -9,9 +9,10 @@ export default function About() {
         <p className="mt-8 text-lg leading-8 text-gray-600">
           I am an Economics student at Symbiosis School of Economics with a
           specialization in Data Analytics. My interests lie in econometrics,
-          data-driven decision making, and applied research. I enjoy working
-          with SQL, Python, R, and Tableau to analyze complex datasets and
-          communicate insights effectively.
+          labour markets, gender economics, and data-driven decision making.
+          My current research examines generative AI exposure and the gender
+          wage gap in India. I use research methods, SQL, Python, R, and data
+          visualization to analyze questions across economics and business.
         </p>
       </div>
     </section>

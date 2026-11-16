@@ -14,7 +14,7 @@ export default function PortfolioCard({
   technologies,
 }: PortfolioCardProps) {
   return (
-    <Link href={`/projects/${slug}`}>
+    <Link href={`/portfolio/${slug}`}>
       <div className="group h-full cursor-pointer rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
 
         <h3 className="text-2xl font-bold text-gray-900 transition-colors group-hover:text-blue-600">

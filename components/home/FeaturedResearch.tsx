@@ -8,12 +8,14 @@ export default function FeaturedResearch() {
 
       <SectionHeading
         title="Featured Research"
-        subtitle="Academic research in economics, econometrics and finance."
+        subtitle="Research in economics, gender and labour markets, including an ongoing study of generative AI exposure and the gender wage gap in India."
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
 
-        {research.map((paper) => (
+        {[...research]
+          .sort((a, b) => Number(b.status === "Ongoing") - Number(a.status === "Ongoing"))
+          .map((paper) => (
           <ResearchCard
             key={paper.id}
             title={paper.title}
@@ -22,6 +24,7 @@ export default function FeaturedResearch() {
             tags={paper.tags}
             slug={paper.slug}
             thumbnail={paper.thumbnail}
+            status={paper.status}
           />
         ))}
 

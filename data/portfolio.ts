@@ -86,7 +86,7 @@ export const portfolio: PortfolioItem[] = [
       "Visualization",
     ],
     status: "Completed",
-    image: "/portfolio/bank.jpg",
+    image: "/portfolio/project-placeholder.svg",
   },
 
   {
@@ -111,7 +111,7 @@ export const portfolio: PortfolioItem[] = [
       "Machine Learning",
     ],
     status: "Completed",
-    image: "/portfolio/insurance.jpg",
+    image: "/portfolio/project-placeholder.svg",
   },
 
   {
@@ -135,7 +135,7 @@ export const portfolio: PortfolioItem[] = [
     ],
     status: "Completed",
     image: "/portfolio/behavioral-nudges.png",
-    pdf: "/projects/behavioral-nudges.pdf",
+    pdf: "/portfolio/behavioral-nudges.pdf",
     featured: true,
   },
 
@@ -160,7 +160,8 @@ export const portfolio: PortfolioItem[] = [
       "Data Interpretation",
     ],
     status: "Completed",
-    image: "/portfolio/monetary.jpg",
+    image: "/papers/research/monetary-policy.png",
+    pdf: "/papers/monetary-policy.pdf",
   },
 
   {
@@ -184,7 +185,8 @@ export const portfolio: PortfolioItem[] = [
       "Data Interpretation",
     ],
     status: "Completed",
-    image: "/portfolio/automobile.jpg",
+    image: "/papers/research/automobile-profitability.png",
+    pdf: "/portfolio/automobile-profitability.pdf",
   },
 
   {
@@ -205,7 +207,7 @@ export const portfolio: PortfolioItem[] = [
       "Critical Analysis",
     ],
     status: "Completed",
-    image: "/portfolio/holocaust.jpg",
+    image: "/portfolio/project-placeholder.svg",
   },
 
   {
@@ -227,7 +229,7 @@ export const portfolio: PortfolioItem[] = [
       "Philosophical Analysis",
     ],
     status: "Completed",
-    image: "/portfolio/ethics.jpg",
+    image: "/portfolio/project-placeholder.svg",
   },
 
   {
@@ -250,7 +252,7 @@ export const portfolio: PortfolioItem[] = [
     ],
     status: "Completed",
     image: "/portfolio/time-use-surveys.png",
-    pdf: "/projects/time-use-surveys.pdf",
+    pdf: "/portfolio/time-use-surveys.pdf",
   },
 
   {
@@ -272,7 +274,7 @@ export const portfolio: PortfolioItem[] = [
       "Report Writing",
     ],
     status: "Completed",
-    image: "/portfolio/euasean.jpg",
+    image: "/portfolio/project-placeholder.svg",
   },
 
   {
@@ -293,8 +295,8 @@ export const portfolio: PortfolioItem[] = [
       "Academic Writing",
     ],
     status: "Completed",
-    image: "/portfolio/leontief-paradox.jpg",
-    pdf: "/projects/leontief-paradox.pdf",
+    image: "/portfolio/leontief-paradox.png",
+    pdf: "/portfolio/leontief-paradox.pdf",
   },
 
   {
@@ -318,6 +320,38 @@ export const portfolio: PortfolioItem[] = [
       "UI/UX",
     ],
     status: "Ongoing",
-    image: "/portfolio/portfolio.jpg",
+    image: "/portfolio/project-placeholder.svg",
+  },
+  {
+    id: 13,
+    slug: "generative-ai-exposure-gender-wage-gap-india",
+    title:
+      "Generative AI Exposure and the Gender Wage Gap among Regular Salaried Workers in India",
+    category: "Research",
+    year: "2026",
+    overview:
+      "Ongoing dissertation proposal examining how occupation-level generative AI exposure relates to the gender earnings gap among regular salaried workers in India, using PLFS 2025 microdata and distributional and explainable machine-learning approaches.",
+    technologies: ["Labour Economics", "PLFS", "Econometrics", "Machine Learning"],
+    skills: ["Survey Data", "Regression", "Quantile Analysis", "Explainable Machine Learning"],
+    status: "Ongoing",
+    image: "/portfolio/dissertation-proposal-thumbnail.svg",
+    pdf: "/portfolio/dissertation-proposal-final-revised.pdf",
+    featured: true,
+  },
+  {
+    id: 14,
+    slug: "women-household-decision-making-pune",
+    title:
+      "Decision-Making Power of Women in Low-Income Households: A Case Study of Pune",
+    category: "Research",
+    year: "2025–2026",
+    overview:
+      "A case study of women’s participation in household decisions among low-income households in Pune, based on primary and secondary research with responses from 162 participants.",
+    technologies: ["Gender Economics", "Household Economics", "Primary Research"],
+    skills: ["Survey Research", "Gender Economics", "Data Collection", "Research Analysis"],
+    status: "Completed",
+    image: "/portfolio/women-household-decisions-thumbnail.svg",
+    pdf: "/portfolio/primary-and-secondary-research.pdf",
+    featured: true,
   },
 ];

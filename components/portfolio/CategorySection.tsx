@@ -15,7 +15,10 @@ export default function CategorySection({
   if (items.length === 0) return null;
 
   return (
-    <section className="mx-auto mt-24 max-w-7xl px-6">
+    <section
+      id={title === "Research" ? "portfolio" : undefined}
+      className="mx-auto mt-24 max-w-7xl px-6"
+    >
       <div className="mb-12">
         <h2 className="text-4xl font-bold tracking-tight text-slate-900">
           {title}

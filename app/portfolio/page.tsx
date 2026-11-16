@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-
-import { portfolio, type PortfolioItem } from "@/data/portfolio";
+import { portfolio } from "@/data/portfolio";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -14,7 +11,7 @@ import CategorySection from "@/components/portfolio/CategorySection";
 export default function PortfolioPage() {
   const research = portfolio.filter(
     (item) => item.category === "Research"
-  );
+  ).sort((a, b) => Number(b.status === "Ongoing") - Number(a.status === "Ongoing"));
 
   const analytics = portfolio.filter(
     (item) => item.category === "Data Analytics"
@@ -47,7 +44,7 @@ export default function PortfolioPage() {
 
         <CategorySection
           title="Research"
-          subtitle="Research papers focusing on economics, finance, public policy and behavioural studies."
+          subtitle="Research papers on economics, finance, gender, labour markets, and household decision-making, including ongoing work."
           items={research}
         />
 

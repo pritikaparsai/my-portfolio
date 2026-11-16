@@ -1,4 +1,6 @@
 import Skills from "@/components/home/Skills";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Skills | Pritika Parsai",
@@ -8,8 +10,12 @@ export const metadata = {
 
 export default function SkillsPage() {
   return (
-    <main>
-      <Skills />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Skills />
+      </main>
+      <Footer />
+    </>
   );
 }

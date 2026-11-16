@@ -2,7 +2,7 @@ import { research } from "@/data/research";
 
 export default function ResearchStats() {
   return (
-    <section className="mt-12 grid gap-6 md:grid-cols-3">
+    <section className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
 
       <div className="rounded-2xl bg-slate-900 p-8 text-center text-white">
 
@@ -16,10 +16,17 @@ export default function ResearchStats() {
 
       </div>
 
+      <div className="rounded-2xl bg-emerald-600 p-8 text-center text-white">
+        <h2 className="text-5xl font-black">
+          {research.filter((paper) => paper.status === "Ongoing").length}
+        </h2>
+        <p className="mt-3">Ongoing Research</p>
+      </div>
+
       <div className="rounded-2xl bg-blue-600 p-8 text-center text-white">
 
         <h2 className="text-5xl font-black">
-          {new Set(research.flatMap((p) => p.tags)).size}
+          4
         </h2>
 
         <p className="mt-3">
@@ -31,11 +38,11 @@ export default function ResearchStats() {
       <div className="rounded-2xl bg-indigo-600 p-8 text-center text-white">
 
         <h2 className="text-5xl font-black">
-          {research[0]?.year}
+          2026
         </h2>
 
         <p className="mt-3">
-          Latest Publication
+          Latest Research
         </p>
 
       </div>

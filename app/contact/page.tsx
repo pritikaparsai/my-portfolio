@@ -2,9 +2,14 @@ export const metadata = {
   title: "Contact | Pritika Parsai",
 };
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
+
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-20">
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-4xl px-6 py-20">
 
       <section className="text-center">
 
@@ -17,8 +22,8 @@ export default function ContactPage() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-          Whether it's research, internships, graduate
-          opportunities or collaborations, I'd love to hear from you.
+          Whether it&apos;s research, internships, graduate
+          opportunities or collaborations, I&apos;d love to hear from you.
         </p>
 
       </section>
@@ -29,16 +34,16 @@ export default function ContactPage() {
 
           <div>
             <h3 className="font-semibold">Email</h3>
-            <p className="text-slate-600">
+            <a className="text-slate-600 hover:text-blue-600" href="mailto:pritikaparsai05@gmail.com">
               pritikaparsai05@gmail.com
-            </p>
+            </a>
           </div>
 
           <div>
             <h3 className="font-semibold">LinkedIn</h3>
-            <p className="text-slate-600">
-              www.linkedin.com/in/pritika-parsai
-            </p>
+            <a className="text-slate-600 hover:text-blue-600" href="https://www.linkedin.com/in/pritika-parsai" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/pritika-parsai
+            </a>
           </div>
 
 
@@ -46,6 +51,8 @@ export default function ContactPage() {
 
       </div>
 
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

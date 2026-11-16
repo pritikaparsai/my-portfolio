@@ -4,7 +4,6 @@ export type Experience = {
   role: string;
   duration: string;
   location: string;
-  logo: string;
   description: string;
   responsibilities: string[];
   technologies: string[];
@@ -13,13 +12,30 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    id: 3,
+    company: "Likho",
+    role: "Operations Associate",
+    duration: "February 2026 – July 2026",
+    location: "",
+    description:
+      "Supported business research and website planning through competitive analysis, API evaluation, and user experience improvements.",
+    responsibilities: [
+      "Performed competitive analysis of industry businesses and evaluated APIs to identify integration opportunities.",
+      "Supported website architecture, information structuring, and user experience optimization.",
+    ],
+    technologies: ["Competitive Analysis", "API Evaluation", "Website Architecture", "User Experience"],
+    achievements: [
+      "Identified potential API integration opportunities through evaluation and competitive research.",
+      "Contributed to website information architecture and user experience optimization.",
+    ],
+  },
+  {
     id: 1,
     company: "Paytm Payments Services Ltd.",
     role: "Merchant Operations & Risk Intern",
     duration: "April 2025 – May 2025",
     location: "Noida, Uttar Pradesh",
 
-    logo: "/experience/paytm.png",
 
     description:
       "Worked with the Merchant Operations & Risk team to analyse transaction patterns, optimise SQL workflows, and support merchant risk investigations through data-driven analysis.",
@@ -58,7 +74,6 @@ export const experiences: Experience[] = [
     duration: "May 2024 – June 2024",
     location: "Noida, Uttar Pradesh",
 
-    logo: "/experience/navratan.png",
 
     description:
       "Worked on research initiatives focused on emotional wellness and community development through survey-based data collection and analysis.",

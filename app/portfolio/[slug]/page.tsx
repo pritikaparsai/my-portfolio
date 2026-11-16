@@ -4,15 +4,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
   ArrowLeft,
-  ArrowRight,
   CalendarDays,
-  FolderKanban,
-  Globe,
   FileText,
   ExternalLink,
   MonitorPlay,
   PlayCircle,
-  CheckCircle2,
 } from "lucide-react";
 
 import Navbar from "@/components/Navbar";
@@ -29,6 +25,20 @@ export async function generateStaticParams() {
   return portfolio.map((item) => ({
     slug: item.slug,
   }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const item = portfolio.find((project) => project.slug === slug);
+
+  if (!item) {
+    return { title: "Portfolio Project" };
+  }
+
+  return {
+    title: `${item.title} | Portfolio`,
+    description: item.overview,
+  };
 }
 
 export default async function PortfolioProjectPage({

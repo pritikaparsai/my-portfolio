@@ -1,5 +1,7 @@
 import ExperienceStats from "@/components/experience/ExperienceStats";
 import Timeline from "@/components/experience/Timeline";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Experience | Pritika Parsai",
@@ -9,7 +11,9 @@ export const metadata = {
 
 export default function ExperiencePage() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-20">
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-7xl px-6 py-20">
 
       {/* Hero */}
 
@@ -24,7 +28,7 @@ export default function ExperiencePage() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-          My internships have focused on applying data analytics,
+          My professional experience has focused on applying data analytics,
           economics and research methodologies to solve practical
           business and social problems. From analysing merchant
           transaction patterns at Paytm Payments Services to conducting
@@ -41,6 +45,8 @@ export default function ExperiencePage() {
 
       <Timeline />
 
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

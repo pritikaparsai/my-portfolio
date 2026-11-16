@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { research } from "@/data/research";
+import { portfolio } from "@/data/portfolio";
+import { experiences } from "@/data/experience";
+import { education } from "@/data/education";
 
 export default function Hero() {
   return (
@@ -12,7 +16,7 @@ export default function Hero() {
       <div className="max-w-2xl">
 
         <p className="text-lg font-semibold text-blue-600">
-          👋 Hello, I'm
+          👋 Hello, I&apos;m
         </p>
 
         <h1 className="mt-4 text-5xl font-extrabold leading-tight text-gray-900 md:text-6xl">
@@ -24,10 +28,10 @@ export default function Hero() {
         </h2>
 
         <p className="mt-8 text-lg leading-8 text-gray-500">
-          I enjoy solving real-world problems through economics,
-          econometrics, data analytics, and technology. My work combines
-          research, SQL, Python, and data visualization to transform data
-          into actionable insights.
+          My current research explores generative AI exposure and the gender
+          wage gap in India, alongside women’s household decision-making in
+          Pune. I bring together economics, data analytics, business operations,
+          and applied research to answer practical questions.
         </p>
 
         {/* Buttons */}
@@ -41,21 +45,22 @@ export default function Hero() {
           </Link>
 
           <a
-            href="/resume/resume.pdf"
-            download
+            href="https://github.com/pritikaparsai"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-xl border border-blue-600 px-6 py-3 font-semibold text-blue-600 transition hover:bg-blue-50"
           >
-            <Download size={18} />
-            Download Resume
+            <ExternalLink size={18} />
+            GitHub
           </a>
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
 
           <div>
             <h3 className="text-3xl font-bold text-gray-900">
-              2+
+              {research.length}
             </h3>
 
             <p className="mt-2 text-gray-500">
@@ -65,7 +70,7 @@ export default function Hero() {
 
           <div>
             <h3 className="text-3xl font-bold text-gray-900">
-              5+
+              {portfolio.length}
             </h3>
 
             <p className="mt-2 text-gray-500">
@@ -75,12 +80,19 @@ export default function Hero() {
 
           <div>
             <h3 className="text-3xl font-bold text-gray-900">
-              2
+              {experiences.length}
             </h3>
 
             <p className="mt-2 text-gray-500">
-              Internships
+              Professional Experiences
             </p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold text-gray-900">
+              {education[0]?.totalUndergraduateCredits}
+            </h3>
+            <p className="mt-2 text-gray-500">Undergraduate Credits</p>
           </div>
 
         </div>
